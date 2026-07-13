@@ -2,61 +2,26 @@
 // VIDEO CONTROL
 // ===============================
 
-
 const video = document.getElementById("introVideo");
-
 const soundBtn = document.querySelector(".sound-btn");
 
 
+function toggleSound(){
 
-window.addEventListener("load",()=>{
+    if(video.muted){
 
+        video.muted = false;
 
-    if(video){
-
-        video.play();
+        soundBtn.innerHTML = "🔊";
 
     }
+    else{
 
+        video.muted = true;
 
-});
+        soundBtn.innerHTML = "🔇";
 
-
-
-
-
-if(soundBtn){
-
-
-    soundBtn.addEventListener("click",()=>{
-
-
-        if(video.muted){
-
-
-            video.muted = false;
-
-            video.volume = 1;
-
-            soundBtn.innerHTML = "🔊";
-
-
-        }
-
-
-        else{
-
-
-            video.muted = true;
-
-            soundBtn.innerHTML = "🔇";
-
-
-        }
-
-
-    });
-
+    }
 
 }
 // ===============================
